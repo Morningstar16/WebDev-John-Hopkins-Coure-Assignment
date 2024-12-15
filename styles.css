@@ -1,49 +1,90 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-}
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+    .menu-item {
+      width: 300px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-.hero {
-    background-image: url('hero.jpg');
-    background-size: cover;
-    text-align: center;
-    padding: 5rem 0;
-    color: white;
-}
+    .menu-title {
+      position: absolute;
+      top: -15px;
+      left: 15px;
+      background-color: #d3a497;
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+      border-radius: 3px;
+    }
 
-.section {
-    padding: 2rem;
-}
+    .menu-title.beef {
+      background-color: #b22222;
+    }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
+    .menu-title.sushi {
+      background-color: #ffd700;
+    }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
+    .menu-content {
+      margin-top: 20px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1024px) {
+      .menu-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu-item {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .menu-item {
+        width: 95%;
+        padding: 8px;
+      }
+      .menu-title {
+        top: -10px;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+      .menu-title {
+        font-size: 0.8rem;
+      }
+   
